@@ -3,7 +3,12 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
-	const [position, setPostion] = useState();
+	const [position, setPostion] = useState({
+    coords : {
+      longitude: "",
+      latitude: ""
+    }
+  });
 
 	useEffect(() => {
 		navigator.geolocation.getCurrentPosition((position) => {
